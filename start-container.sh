@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # the default node number is 3
-N=${1:-3}
+N=${2:-3}
 
 
 # start master container
@@ -9,7 +9,7 @@ docker rm -f master &> /dev/null
 echo "start master container..."
 docker run -itd \
            --net=hadoop \
-           -v /Users/milton/Documents/workspace/self/spark-docker/jars:/root/jars \
+           -v $1:/root/jars \
            -p 7077:7077 \
            -p 8080:8080 \
            -p 50070:50070 \

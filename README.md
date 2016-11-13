@@ -21,11 +21,11 @@ git clone git@github.com:miaolegemitong/spark-docker.git
 sudo docker network create --driver=bridge hadoop
 ```
 
-#####4. 启动容器
+#####4. 启动容器，需要把放jar包的路径作为第一个参数传递，之后这个路径会被挂载到master容器的/root/jars目录
 
 ```
 cd spark-docker
-sudo ./start-container.sh
+sudo ./start-container.sh <your jars path>
 ```
 
 **output:**
@@ -91,7 +91,7 @@ Hello    2
 #####3. 启动容器
 
 ```
-sudo ./start-container.sh 5
+sudo ./start-container.sh <your jars path> 5
 ```
 - 使用和第2步相同的参数
 
