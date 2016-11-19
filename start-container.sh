@@ -10,7 +10,7 @@ echo "start master container..."
 docker run -itd \
            --net=hadoop \
            -v $1:/root/jars \
-           -p 7077:7077 \
+           -p 4040:4040 \
            -p 8080:8080 \
            -p 50070:50070 \
            -p 8088:8088 \

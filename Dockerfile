@@ -29,7 +29,8 @@ ENV PATH=$SPARK_HOME/bin:$PATH
 RUN mv /tmp/hadoop-slaves $HADOOP_HOME/etc/hadoop/slaves && \
     mv /tmp/spark-slaves $SPARK_HOME/conf/slaves && \
     mv /tmp/spark-env.sh $SPARK_HOME/conf/spark-env.sh && \
-    mv /tmp/start-spark.sh /root/start-spark.sh
+    mv /tmp/start-spark.sh /root/start-spark.sh && \
+    mv /tmp/run-sparkpi.sh /root/run-sparkpi.sh
 
 RUN chmod +x /root/start-spark.sh && \
     chmod +x /usr/local/spark/sbin/start-all.sh
