@@ -26,6 +26,6 @@ echo ""
 echo -e "\nbuild docker hadoop image\n"
 
 # rebuild kiwenlau/hadoop image
-sudo docker build -t miaolegemitong/spark:1.0 .
+docker build -t miaolegemitong/spark:1.0 .
 
 echo ""
