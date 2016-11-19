@@ -33,6 +33,7 @@ RUN mv /tmp/hadoop-slaves $HADOOP_HOME/etc/hadoop/slaves && \
     mv /tmp/run-sparkpi.sh /root/run-sparkpi.sh
 
 RUN chmod +x /root/start-spark.sh && \
-    chmod +x /usr/local/spark/sbin/start-all.sh
+    chmod +x /usr/local/spark/sbin/start-all.sh && \
+    chmod +x /root/run-sparkpi.sh
 
 CMD [ "sh", "-c", "service ssh start; bash"]
